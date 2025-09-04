@@ -1,0 +1,78 @@
+<div class="logout-container">
+  <h1>Courses</h1>
+  <p>Spring Boot Security</p>
+
+  <h2>logout</h2>
+  <form method="get" action="/logout">
+    <button class="logout-btn" type="submit">Logout</button>
+  </form>
+</div>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .logout-container {
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 300px;
+  }
+
+  .login-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    color: #f0f0f0;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 8px;
+    background: #2c2c2c;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  .form-group input:focus {
+    outline: 2px solid #0078ff;
+  }
+
+  .logout-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: #0078ff;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .logout-btn:hover {
+    background: #005fcc;
+  }
+</style>
