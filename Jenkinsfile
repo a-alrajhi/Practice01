@@ -14,28 +14,10 @@ pipeline {
 			}
 		}
 
-		stage('Build') {
-			steps {
-				sh 'mvn clean compile'
-			}
-		}
+stage('Build')   { steps { sh 'mvn -Dmaven.compiler.release=21 clean compile' } }
+stage('Test')    { steps { sh 'mvn -Dmaven.compiler.release=21 test' } }
+stage('Package') { steps { sh 'mvn -Dmaven.compiler.release=21 -DskipTests package' } }
 
-		stage('Test') {
-			steps {
-				sh 'mvn test'
-			}
-			post {
-				always {
-					junit 'target/surefire-reports/*.xml'
-				}
-			}
-		}
-
-		stage('Package') {
-			steps {
-				sh 'mvn package -DskipTests'
-			}
-		}
 	}
 
 	post {
